@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link href="/dist/output.css" rel="stylesheet">
+  
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header class="relative flex flex-col font-Alata">
+    <img src="/images/mobile/image-hero.jpg" alt="image-hero" class="relative lg:hidden">
+    <!-- desktop image -->
+    <img src="/images/desktop/image-hero.jpg" alt="image-hero" class="relative w-full hidden lg:block"> 
+    <!-- navigation start -->
+
+    <nav class="absolute flex justify-between items-center inset-x-0 px-5 mt-10 lg:mt-16 lg:px-44 ">
+      <a>
+        <img src="/images/logo.svg" alt="logo" class="w-36 lg:w-52">
+      </a>
+      <div class="lg:hidden">
+        <button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" type="button" aria-controls="drawer-navigation">
+          <span class="sr-only">Open main menu</span>
+          <svg width="24" height="16" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"/></g>
+          </svg>
+        </button>
+      </div>
+
+      <!-- mobile menu when drawer open-->
+      <div class="flex flex-col fixed top-0 left-0 z-40 w-full h-screen px-5 overflow-y-auto transition-transform -translate-x-full bg-black" id="drawer-navigation" tabindex="-1" aria-labelledby="drawer-navigation-label">
+        <div class="flex justify-between mt-10">
+          <div>
+            <img src="/images/logo.svg" alt="logo" class="w-36">
+          </div>
+          <button data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation">
+            <span class="sr-only">Close main menu</span>
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" fill="#FFF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+        <ul class="font-Josefin_Sans font-extralight uppercase text-3xl relative top-[20%] flex flex-col">
+          <li>
+            <a href="#" class="block pb-2 text-white" aria-current="page">About</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 text-white">Careers</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 text-white ">Events</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 text-white ">Products</a>
+          </li>
+          <li>
+            <a href="#" class="block pt-2 text-white">Support</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- desktop menu -->
+      <div class="hidden lg:block">
+        <ul class="font-normal relative text-[15px] flex">
+          <li class=" text-white">
+            <div class="before:block before:absolute before:-inset-1 hover:before:bg-white before:pointer-events-none before:top-8 before:pt-[2px] 
+              before:left-4 before:right-4 relative inline-block">
+              <a href="#" aria-current="page" class="relative">About</a>
+            </div>
+          </li>
+          <li class="block ml-10 text-white">
+            <div class="before:block before:absolute before:-inset-1 hover:before:bg-white before:pointer-events-none before:top-8 before:pt-[2px] 
+              before:left-4 before:right-4 relative inline-block">
+              <a href="#" aria-current="page" class="relative">Careers</a>
+            </div>
+          </li>
+          <li class="block ml-10  text-white ">
+            <div class="before:block before:absolute before:-inset-1 hover:before:bg-white before:pointer-events-none before:top-8 before:pt-[2px] 
+              before:left-4 before:right-4 relative inline-block">
+              <a href="#" aria-current="page" class="relative">Events</a>
+            </div>
+          </li>
+          <li class="block ml-10 text-white">
+            <div class="before:block before:absolute before:-inset-1 hover:before:bg-white before:pointer-events-none before:top-8 before:pt-[2px] 
+              before:left-4 before:right-4 relative inline-block">
+              <a href="#" aria-current="page" class="relative">Products</a>
+            </div>
+          </li>
+          <li class="block ml-10 text-white">
+            <div class="before:block before:absolute before:-inset-1 hover:before:bg-white before:pointer-events-none before:top-8 before:pt-[2px] 
+              before:left-4 before:right-4 relative inline-block">
+              <a href="#" aria-current="page" class="relative">Support</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+    <!-- navigation end -->
+
+    <div class="absolute h-fit top-[35%] inset-[0%] flex justify-start items-center font-Josefin_Sans text-4xl tracking-wider py-3 pl-6 mx-5 text-white 
+      uppercase font-extralight border-2 border-white lg:justify-start lg:left-[10.2%] lg:right-[42%] lg:p-10 lg:pr-0 lg:text-7xl">
+      <!-- for mobile -->
+      <h1 class="whitespace-pre-line lg:hidden">Immersive 
+        experiences 
+        that 
+        deliver
+      </h1>
+      <!-- for desktop -->
+      <h1 class="whitespace-pre-line hidden lg:block">Immersive 
+        experiences 
+        that deliver
+      </h1>
+    </div>
+  </header>
+
+  <main class="lg:px-44 lg:my-40 font-Alata">
+    <section class="flex flex-col text-center mt-20 mb-10 px-5 lg:relative lg:m-0 lg:p-0">
+      
+      <div class="lg:hidden">
+        <img src="/images/mobile/image-interactive.jpg" alt="image-interactive">
+        <h1 class="text-4xl tracking-normal font-extralight my-10 uppercase font-Josefin_Sans">The leader in interactive VR</h1>
+        <p class="text-DarkGray text-[15px] tracking-wider font-normal px-6 leading-loose">
+          Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.
+        </p>
+      </div>
+
+      <div class="hidden lg:block w-2/3">
+        <img src="/images/desktop/image-interactive.jpg" alt="image-interactive">
+        <div class="absolute bg-white bottom-0 end-0 w-[52%] text-start pl-28 pt-28">
+          <h1 class="font-Josefin_Sans text-5xl tracking-normal font-extralight mb-10 uppercase whitespace-pre-line">The leader in 
+            interactive VR
+          </h1>
+          <p class="text-DarkGray text-[16px] tracking-wide font-normal">
+            Founded in 2011, Loopstudios has been producing world-class virtual reality 
+            projects for some of the best companies around the globe. Our award-winning 
+            creations have transformed businesses through digital experiences that bind 
+            to their brand.
+          </p>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="flex flex-col text-center mb-20 px-5 lg:hidden font-Josefin_Sans">
+      <h1 class="text-4xl tracking-normal font-extralight my-10 uppercase">Our creations</h1>
+      <div class="relative my-5">
+        <img src="images/mobile/image-deep-earth.jpg" alt="image-deep-earth">
+        <div class="absolute w-full h-full bottom-0 text-white text-2xl
+          leading-none uppercase text-start whitespace-pre-line font-extralight pl-5 pb-5 bg-gradient-to-r from-black/50 flex items-end">
+          Deep
+          earth
+        </div>
+      </div>
+      <div class="relative mb-5">
+        <img src="images/mobile/image-night-arcade.jpg" alt="image-deep-earth">
+        <p class="absolute w-full h-full bottom-0 text-white text-2xl 
+          leading-none uppercase text-start whitespace-pre-line font-extralight pl-5 pb-5 bg-gradient-to-r from-black/50 flex items-end">
+          Night 
+          arcade
+        </p>
+      </div>
+      <div class="relative mb-5">
+        <img src="images/mobile/image-soccer-team.jpg" alt="image-soccer-team">
+        <p class="absolute w-full h-full bottom-0 text-white text-2xl 
+          leading-none uppercase text-start whitespace-pre-line font-extralight pl-5 pb-5 bg-gradient-to-r from-black/50 flex items-end">
+          Soccer 
+          team VR
+        </p>
+      </div>
+      <div class="relative mb-5">
+        <img src="images/mobile/image-grid.jpg" alt="image-grid">
+        <p class="absolute w-full h-full bottom-0 text-white text-2xl 
+          leading-none uppercase text-start whitespace-pre-line font-extralight pl-5 pb-5 bg-gradient-to-r from-black/50 flex items-end">
+          The 
+          grid
+        </p>
+      </div>
+      <div class="relative mb-5">
+        <img src="images/mobile/image-from-above.jpg" alt="image-from-above">
+        <p class="absolute w-full h-full bottom-0 text-white text-2xl 
+          leading-none uppercase text-start whitespace-pre-line font-extralight pl-5 pb-5 bg-gradient-to-r from-black/50 flex items-end">
+          From up
+          above VR
+        </p>
+      </div>
+      <div class="relative mb-5">
+        <img src="images/mobile/image-pocket-borealis.jpg" alt="image-pocket-borealis">
+        <p class="absolute w-full h-full bottom-0 text-white text-2xl 
+          leading-none uppercase text-start whitespace-pre-line font-extralight pl-5 pb-5 bg-gradient-to-r from-black/50 flex items-end">
+          Pocket
+          borealis
+        </p>
+      </div>
+      <div class="relative mb-5">
+        <img src="images/mobile/image-curiosity.jpg" alt="image-curiosity">
+        <p class="absolute w-full h-full bottom-0 text-white text-2xl 
+          leading-none uppercase text-start whitespace-pre-line font-extralight pl-5 pb-5 bg-gradient-to-r from-black/50 flex items-end">
+          The 
+          curiosity
+        </p>
+      </div>
+      <div class="relative mb-5">
+        <img src="images/mobile/image-fisheye.jpg" alt="image-fisheye">
+        <p class="absolute w-full h-full bottom-0 text-white text-2xl 
+          leading-none uppercase text-start whitespace-pre-line font-extralight pl-5 pb-5 bg-gradient-to-r from-black/50 flex items-end">
+          Make it 
+          fisheye
+        </p>
+      </div>
+      <a href="" class="border-2 border-black w-1/2 mx-auto my-5 py-2 uppercase tracking-widest font-Alata">See all</a>
+    </section>
+
+    <section class="hidden lg:block my-20 font-Josefin_Sans">
+      <div class="flex justify-between items-center">
+        <h1 class="text-5xl tracking-normal font-extralight uppercase my-20">Our creations</h1>
+        <a href="" class="border-2 border-black uppercase tracking-widest px-10 py-2 hover:text-white hover:bg-black font-Alata">See all</a>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex flex-row justify-between mb-10">
+          <div class="relative">
+            <img src="images/desktop/image-deep-earth.jpg" alt="image-deep-earth">
+            <a href="" class="absolute w-full h-full bottom-0 text-white text-3xl 
+              leading-none uppercase text-start whitespace-pre-line font-extralight pl-10 pb-10 bg-gradient-to-r from-black/50 flex items-end hover:bg-gradient-to-r hover:from-white/75 hover:to-white/75  hover:text-black">
+              Deep
+              earth
+            </a>
+          </div>
+          <div class="relative">
+            <img src="images/desktop/image-night-arcade.jpg" alt="image-night-arcade">
+            <a href="" class="absolute w-full h-full bottom-0 text-white text-3xl 
+              leading-none uppercase text-start whitespace-pre-line font-extralight pl-10 pb-10 bg-gradient-to-r from-black/50 flex items-end hover:bg-gradient-to-r hover:from-white/75 hover:to-white/75  hover:text-black">
+              Night 
+              arcade
+            </a>
+          </div>
+          <div class="relative">
+            <img src="images/desktop/image-soccer-team.jpg" alt="image-soccer-team">
+            <a href="" class="absolute w-full h-full bottom-0 text-white text-3xl 
+              leading-none uppercase text-start whitespace-pre-line font-extralight pl-10 pb-10 bg-gradient-to-r from-black/50 flex items-end hover:bg-gradient-to-r hover:from-white/75 hover:to-white/75  hover:text-black">
+              Soccer 
+              team VR
+            </a>
+          </div>
+          <div class="relative">
+            <img src="images/desktop/image-grid.jpg" alt="image-grid">
+            <a href="" class="absolute w-full h-full bottom-0 text-white text-3xl 
+              leading-none uppercase text-start whitespace-pre-line font-extralight pl-10 pb-10 bg-gradient-to-r from-black/50 flex items-end hover:bg-gradient-to-r hover:from-white/75 hover:to-white/75  hover:text-black">
+              The 
+              grid
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-row justify-between">
+          <div class="relative">
+            <img src="images/desktop/image-from-above.jpg" alt="image-from-above">
+            <a href="" class="absolute w-full h-full bottom-0 text-white text-3xl 
+              leading-none uppercase text-start whitespace-pre-line font-extralight pl-10 pb-10 bg-gradient-to-r from-black/50 flex items-end hover:bg-gradient-to-r hover:from-white/75 hover:to-white/75  hover:text-black">
+              From up
+              above VR
+            </a>
+          </div>
+          <div class="relative">
+            <img src="images/desktop/image-pocket-borealis.jpg" alt="image-pocket-borealis">
+            <a href="" class="absolute w-full h-full bottom-0 text-white text-3xl 
+              leading-none uppercase text-start whitespace-pre-line font-extralight pl-10 pb-10 bg-gradient-to-r from-black/50 flex items-end hover:bg-gradient-to-r hover:from-white/75 hover:to-white/75  hover:text-black">
+              Pocket
+              borealis
+            </a>
+          </div>
+          <div class="relative">
+            <img src="images/desktop/image-curiosity.jpg" alt="image-curiosity">
+            <a href="" class="absolute w-full h-full bottom-0 text-white text-3xl 
+              leading-none uppercase text-start whitespace-pre-line font-extralight pl-10 pb-10 bg-gradient-to-r from-black/50 flex items-end hover:bg-gradient-to-r hover:from-white/75 hover:to-white/75 hover:text-black">
+              The 
+              curiosity
+            </a>
+          </div>
+          <div class="relative">
+            <img src="images/desktop/image-fisheye.jpg" alt="image-fisheye">
+            <a href="" class="absolute w-full h-full bottom-0 text-white text-3xl 
+              leading-none uppercase text-start whitespace-pre-line font-extralight pl-10 pb-10 bg-gradient-to-r from-black/50 flex items-end hover:bg-gradient-to-r hover:from-white/75 hover:to-white/75  hover:text-black">
+              Make it 
+              fisheye
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="flex flex-col bg-black items-center px-5 lg:flex-row lg:justify-between font-Alata">
+    <div class="mt-20 lg:flex lg:flex-col lg:mt-16 lg:relative lg:left-[10.4%] lg:justify-center">
+      <a>
+        <img src="/images/logo.svg" alt="logo" class="w-36 lg:w-40">
+      </a>
+      <ul class="flex flex-col items-center mt-10 lg:mb-10 lg:flex-row">
+        <li class="block pb-2 text-white lg:p-0 lg:mr-10">
+          <div class="before:block before:absolute before:-inset-1 hover:before:bg-white before:pointer-events-none before:top-8 before:pt-[2px] 
+            before:left-4 before:right-4 relative inline-block">
+            <a href="#" aria-current="page" class="relative">About</a>
+          </div>
+        </li>
+        <li class="block py-2 text-white lg:p-0 lg:mr-10">
+          <div class="before:block before:absolute before:-inset-1 hover:before:bg-white before:pointer-events-none before:top-8 before:pt-[2px] 
+            before:left-4 before:right-4 relative inline-block">
+            <a href="#" aria-current="page" class="relative">Careers</a>
+          </div>
+        </li>
+        <li class="block py-2 text-white lg:p-0 lg:mr-10">
+          <div class="before:block before:absolute before:-inset-1 hover:before:bg-white before:pointer-events-none before:top-8 before:pt-[2px] 
+            before:left-4 before:right-4 relative inline-block">
+            <a href="#" aria-current="page" class="relative">Events</a>
+          </div>
+        </li>
+        <li class="block py-2 text-white lg:p-0 lg:mr-10">
+          <div class="before:block before:absolute before:-inset-1 hover:before:bg-white before:pointer-events-none before:top-8 before:pt-[2px] 
+            before:left-4 before:right-4 relative inline-block">
+            <a href="#" aria-current="page" class="relative">Products</a>
+          </div>
+        </li>
+        <li class="block pt-2 text-white lg:p-0">
+          <div class="before:block before:absolute before:-inset-1 hover:before:bg-white before:pointer-events-none before:top-8 before:pt-[2px] 
+            before:left-4 before:right-4 relative inline-block">
+            <a href="#" aria-current="page" class="relative">Support</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lg:flex lg:flex-col lg:relative lg:right-[10.4%] lg:mt-16">
+      <div class="flex justify-center items-center mt-20 lg:mt-0 lg:justify-end lg:items-end">
+        <div class="lg:before:block lg:before:absolute lg:before:-inset-1 lg:hover:before:bg-white lg:before:pointer-events-none lg:before:top-8 lg:before:pt-[2px] 
+          lg:before:left-0 lg:before:right-0 lg:relative lg:inline-block mx-2">
+          <a href="" class="lg:relative"><img src="/images/icon-facebook.svg" alt="icon-facebook"></a>
+        </div>
+
+        <div class="lg:before:block lg:before:absolute lg:before:-inset-1 lg:hover:before:bg-white lg:before:pointer-events-none lg:before:top-7 lg:before:pt-[2px] 
+          lg:before:left-0 lg:before:right-0 lg:relative lg:inline-block mx-2">
+          <a href="" class="lg:relative"><img src="/images/icon-twitter.svg" alt="icon-twitter"></a>
+        </div>
+        
+        <div class="lg:before:block lg:before:absolute lg:before:-inset-1 lg:hover:before:bg-white lg:before:pointer-events-none lg:before:top-8 lg:before:pt-[2px] 
+          lg:before:left-0 lg:before:right-0 lg:relative lg:inline-block mx-2">
+          <a href="" class="lg:relative"><img src="/images/icon-pinterest.svg" alt="icon-pinterest"></a>
+        </div>
+
+        <div class="lg:before:block lg:before:absolute lg:before:-inset-1 lg:hover:before:bg-white lg:before:pointer-events-none lg:before:top-8 lg:before:pt-[2px] 
+          lg:before:left-0 lg:before:right-0 lg:relative lg:inline-block mx-2 lg:mr-0">
+          <a href="" class="lg:relative"><img src="/images/icon-instagram.svg" alt="icon-instagram"></a>
+        </div>
+      </div>
+      <p class="text-DarkGray mt-5 mb-10 whitespace-nowrap lg:mt-10">© 2021 Loopstudios. All rights reserved.</p>
+    </div>
+    
+  </footer>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Efobi Francis</a>.
+  </div>
+
+  <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+</body>
+</html>
